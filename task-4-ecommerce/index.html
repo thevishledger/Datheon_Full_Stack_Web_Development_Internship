@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopKart — Demo E-commerce Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">🛍️ ShopKart</div>
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="Search products…" aria-label="Search products" />
+      </div>
+      <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+        🛒 Cart <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="tagline">Demo store powered by the free <strong>FakeStoreAPI</strong>. The API returns prices in USD — ShopKart converts them to Indian Rupees (₹83 = $1), so every price here is shown in ₹.</p>
+
+    <!-- Category filter buttons are rendered by script.js (All + API categories) -->
+    <div id="categoryBar" class="category-bar"></div>
+
+    <!-- Loading spinner (visible while the API call is in progress) -->
+    <div id="loadingSpinner" class="loading" hidden>
+      <div class="spinner"></div>
+      <p>Loading products…</p>
+    </div>
+
+    <!-- Error box (visible only if the fetch fails) -->
+    <div id="errorBox" class="error-box" hidden>
+      <p>⚠️ Sorry, products could not be loaded. Please check your internet connection and try again.</p>
+      <button id="retryBtn" class="btn btn-primary">Retry</button>
+    </div>
+
+    <!-- Product grid -->
+    <div id="productGrid" class="product-grid"></div>
+    <p id="noResults" class="no-results" hidden>No products match your search / filter. Try something else!</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>ShopKart — a learning project by Vishesh Srivastava • Data: fakestoreapi.com • Not a real store</p>
+    </div>
+  </footer>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div id="cartOverlay" class="cart-overlay" hidden></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCartBtn" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+    <p id="cartEmpty" class="cart-empty">Your cart is empty. Add something you like! 🛒</p>
+
+    <div class="cart-summary" id="cartSummary">
+      <div class="summary-row"><span>Subtotal</span><span id="subtotalEl">₹0</span></div>
+      <div class="summary-row"><span>Shipping</span><span id="shippingEl">₹0</span></div>
+      <p class="shipping-note">Free shipping on orders above ₹8,300, otherwise ₹829</p>
+      <div class="summary-row"><span>Tax (5%)</span><span id="taxEl">₹0</span></div>
+      <div class="summary-row total"><span>Total</span><span id="totalEl">₹0</span></div>
+      <button id="checkoutBtn" class="btn btn-primary btn-block">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT SUCCESS MODAL ================= -->
+  <div id="checkoutModal" class="modal-overlay" hidden>
+    <div class="modal">
+      <div class="success-icon">✅</div>
+      <h2>Order Placed Successfully!</h2>
+      <p id="orderSummaryText"></p>
+      <p class="modal-note">This is a simulated checkout — no real payment was made and nothing will be shipped. Thanks for trying ShopKart!</p>
+      <button id="closeModalBtn" class="btn btn-primary">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
