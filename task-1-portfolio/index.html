@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishesh Srivastava — Frontend & MERN Developer</title>
+  <meta name="description" content="Portfolio of Vishesh Srivastava, a B.Tech CSE 2026 graduate and MERN / React developer from Kanpur, India." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Vishesh<span>.</span></a>
+
+      <nav class="nav" id="navMenu" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme toggle: choice is saved in localStorage by script.js -->
+        <button type="button" id="themeToggle" class="icon-btn" aria-label="Toggle dark / light theme" title="Toggle theme">☀️</button>
+        <!-- Hamburger: only visible on small screens (see styles.css) -->
+        <button type="button" id="hamburger" class="icon-btn hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="hero-kicker">Hello, I'm</p>
+        <h1>Vishesh Srivastava</h1>
+        <h2 class="hero-role">Frontend &amp; MERN Stack Developer</h2>
+        <p class="hero-text">
+          B.Tech CSE 2026 graduate from Kanpur, India. I build fast, responsive web apps
+          with React, Next.js, Node.js and MongoDB — and I love turning ideas into
+          clean, working products.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/thevishledger" target="_blank" rel="noopener">GitHub</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://www.linkedin.com/in/vishesh-srivastava-ab6673254" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">•</span>
+          <a href="https://my-portfolio-vishesh.netlify.app" target="_blank" rel="noopener">Live Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a Computer Science graduate (class of 2026) from Vision Institute of
+              Technology, Kanpur, affiliated with AKTU. My core stack is the MERN stack —
+              MongoDB, Express.js, React.js and Node.js — along with TypeScript, Next.js
+              and Tailwind CSS.
+            </p>
+            <p>
+              I am currently doing a Web Development Internship at Thiranex EduTech LLP (remote),
+              where I work on real web features and learn how production code is
+              written, reviewed and shipped. I have also solved 60+ DSA problems on
+              LeetCode using JavaScript.
+            </p>
+            <p>
+              Right now I'm looking for fresher opportunities as a Frontend Developer,
+              React Developer or Full Stack (MERN) Developer, and I'm open to relocating
+              to Delhi NCR, Bengaluru or Hyderabad — or working remotely.
+            </p>
+          </div>
+          <div class="about-facts">
+            <div class="fact-card">
+              <h3>🎓 Education</h3>
+              <p>B.Tech, Computer Science &amp; Engineering<br />Vision Institute of Technology (AKTU), 2022 – 2026<br />CGPA: 7.0 / 10</p>
+            </div>
+            <div class="fact-card">
+              <h3>💼 Experience</h3>
+              <p>Web Development Intern<br />Thiranex EduTech LLP (Remote)<br />Nov – Dec 2026</p>
+            </div>
+            <div class="fact-card">
+              <h3>📍 Location</h3>
+              <p>Kanpur, Uttar Pradesh<br />Open to relocate / remote</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <!-- Skill cards are rendered by script.js from a data array -->
+        <div id="skillsGrid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Click any project card to see full details.</p>
+        <!-- Project cards are rendered by script.js from a data array -->
+        <div id="projectsGrid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Have an opportunity, a project, or just want to say hello? Send me a message — the form validates your input right here in the browser.</p>
+            <ul class="contact-list">
+              <li>📧 <a href="mailto:visheshsrivastav15@gmail.com">visheshsrivastav15@gmail.com</a></li>
+              <li>🐙 <a href="https://github.com/thevishledger" target="_blank" rel="noopener">github.com/thevishledger</a></li>
+              <li>💼 <a href="https://www.linkedin.com/in/vishesh-srivastava-ab6673254" target="_blank" rel="noopener">linkedin.com/in/vishesh-srivastava-ab6673254</a></li>
+            </ul>
+          </div>
+
+          <!-- novalidate: validation is handled by script.js so we can show friendly messages -->
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="cfName">Your Name</label>
+              <input type="text" id="cfName" name="name" autocomplete="name" placeholder="e.g. Rahul Sharma" />
+              <small class="error-msg" id="errName"></small>
+            </div>
+            <div class="form-group">
+              <label for="cfEmail">Your Email</label>
+              <input type="email" id="cfEmail" name="email" autocomplete="email" placeholder="e.g. rahul@example.com" />
+              <small class="error-msg" id="errEmail"></small>
+            </div>
+            <div class="form-group">
+              <label for="cfMessage">Message</label>
+              <textarea id="cfMessage" name="message" rows="5" placeholder="Write your message (at least 10 characters)"></textarea>
+              <small class="error-msg" id="errMessage"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="formSuccess" class="success-msg" hidden>✅ Thanks! Your message passed validation. (Demo form — no backend, so nothing was actually sent.)</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Vishesh Srivastava • Built with vanilla HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT DETAILS MODAL ================= -->
+  <div id="projectModal" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" id="modalClose" class="modal-close" aria-label="Close details">✕</button>
+      <div id="modalContent"><!-- filled by script.js --></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
